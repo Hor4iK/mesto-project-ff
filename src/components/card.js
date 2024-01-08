@@ -7,10 +7,11 @@ export default function createCard(template, linkValue, descriptionValue, onDele
   const cardElement = template.querySelector('.card').cloneNode(true);
   const deleteButton = cardElement.querySelector('.card__delete-button');
   const imageCard = cardElement.querySelector('.card__image');
+  const titleCard = cardElement.querySelector('.card__title');
 
   imageCard.src = linkValue;
   imageCard.alt = descriptionValue;
-  cardElement.querySelector('.card__title').textContent = descriptionValue;
+  titleCard.textContent = descriptionValue;
   deleteButton.addEventListener('click', e => {
     onDelete(e);
   });
