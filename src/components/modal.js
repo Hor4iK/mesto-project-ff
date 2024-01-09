@@ -1,5 +1,5 @@
 //Function Close Modal Window
-function closeModal() {
+export function closeModal() {
   const modal = document.querySelector('.popup_is-opened');
   const btnModalClose = modal.querySelector('.popup__close');
 
@@ -20,7 +20,7 @@ function closeModalOverlay(evt) {
 }
 
 //Function Open Modal Window
-export default function openModal(modal) {
+export function openModal(modal) {
   const btnModalClose = modal.querySelector('.popup__close');
 
   modal.classList.add('popup_is-opened');
