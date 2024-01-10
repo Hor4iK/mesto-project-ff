@@ -20,7 +20,6 @@ const popupTypeImage = document.querySelector('.popup_type_image');
 const buttonEditProfile = document.querySelector('.profile__edit-button');
 const buttonAddCard = document.querySelector('.profile__add-button');
 
-//Fields of the profile form in DOM
 const formElementProfile = popupEditProfile.querySelector('.popup__form');
 const nameInput = popupEditProfile.querySelector('.popup__input_type_name');
 const jobInput = popupEditProfile.querySelector('.popup__input_type_description');
