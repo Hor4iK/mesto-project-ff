@@ -7,7 +7,9 @@ export const likeCard = e => {
   e.target.classList.toggle('card__like-button_is-active');
 }
 
-export default function createCard(template, linkValue, descriptionValue, onDelete, onLike) {
+
+
+export default function createCard(template, linkValue, descriptionValue, onDelete, onLike, onImage) {
   const cardElement = template.querySelector('.card').cloneNode(true);
   const deleteButton = cardElement.querySelector('.card__delete-button');
   const likeButton = cardElement.querySelector('.card__like-button');
@@ -19,6 +21,9 @@ export default function createCard(template, linkValue, descriptionValue, onDele
   titleCard.textContent = descriptionValue;
   deleteButton.addEventListener('click', onDelete);
   likeButton.addEventListener('click', onLike);
+  imageCard.addEventListener('click', () => {
+    onImage(linkValue, descriptionValue);
+  });
 
   return cardElement;
 };

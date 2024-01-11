@@ -29,7 +29,7 @@ export function openModal(modal) {
 
   btnModalClose.addEventListener('click', closeModal);
   document.addEventListener('keydown', closeModalWithEsc);
-  modal.addEventListener('click', closeModalOverlay);
+  modal.addEventListener('mousedown', closeModalOverlay);
 }
 
 
