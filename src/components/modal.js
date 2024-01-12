@@ -7,7 +7,7 @@ export function closeModal() {
 
   document.removeEventListener('keydown', closeModalWithEsc);
   btnModalClose.removeEventListener('click', closeModal);
-  modal.removeEventListener('click', closeModalOverlay);
+  modal.removeEventListener('mousedown', closeModalOverlay);
 }
 
 //Close Modal Window with button "Esc"
